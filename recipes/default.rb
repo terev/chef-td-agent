@@ -141,7 +141,7 @@ package "td-agent" do
 end
 
 node["td_agent"]["gems"].each do |gem|
-  if plugin.is_a?(String)
+  if gem.is_a?(String)
     td_agent_gem gem do
       plugin false
     end
